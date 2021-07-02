@@ -36,7 +36,8 @@ tar cvzf ~/docker.tar.gz *
 mkdir docker
 tar xvf docker.tar.gz -C ~/docker
 cd docker
-rpm -ivh --replacefiles --replacepkgs *.rpm
+##rpm -ivh --replacefiles --replacepkgs *.rpm
+rpm -Uvh *.rpm --force --nodeps
 systemctl enable docker.service
 systemctl start docker.service
 ```
